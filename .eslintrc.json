@@ -33,12 +33,7 @@
     }
   },
   "ignorePatterns": [
-    "*.js",
-    "!.projenrc.js",
-    "*.d.ts",
-    "node_modules/",
-    "*.generated.ts",
-    "coverage"
+    "src/commercetools-subscription-provider/**"
   ],
   "rules": {
     "indent": [
@@ -145,7 +140,8 @@
       {
         "devDependencies": [
           "**/test/**",
-          "**/build-tools/**"
+          "**/build-tools/**",
+          "src/commercetools-subscription-provider/index.lambda.ts"
         ],
         "optionalDependencies": false,
         "peerDependencies": true

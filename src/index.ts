@@ -1,5 +1,2 @@
-export class Hello {
-  public sayHello() {
-    return 'hello, world!';
-  }
-}
+export * from './commercetools-subscription';
+export * from './commercetools-subscription-targets';
