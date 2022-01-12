@@ -22,7 +22,7 @@ export class SnsSubscriptionTarget implements ICommercetoolsSubscriptionTarget {
     }
   }
 
-  getDestination(scope: Construct): SnsDestination {
+  getDestination(scope: Construct): SnsDestination | SqsDestination | EventBridgeDestination {
     const userName = `CommercetoolsSubscription-${scope.node.id}`;
 
     const user = new User(scope, 'CommercetoolsSubscriptionUser', { userName });
@@ -47,7 +47,7 @@ export class SQSSubscriptionTarget implements ICommercetoolsSubscriptionTarget {
       this.queue = queue;
     }
   }
-  getDestination(scope: Construct): SqsDestination {
+  getDestination(scope: Construct): SnsDestination | SqsDestination | EventBridgeDestination {
     const userName = `CommercetoolsSubscription-${scope.node.id}`;
 
     const user = new User(scope, 'CommercetoolsSubscriptionUser', { userName });
@@ -73,7 +73,7 @@ export class EventbridgeSubscriptionTarget implements ICommercetoolsSubscription
     }
   }
 
-  getDestination(scope: Construct): EventBridgeDestination {
+  getDestination(scope: Construct): SnsDestination | SqsDestination | EventBridgeDestination {
     return <EventBridgeDestination>{
       type: 'EventBridge',
       region: Stack.of(scope).region,

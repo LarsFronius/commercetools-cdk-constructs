@@ -66,7 +66,7 @@ export interface ICommercetoolsSubscriptionProps {
  *             }],
  *             changes: [],
  *             projectKey: props.ctProjektKey,
- *             secret: Secret.fromSecretNameV2(this, 'CTSecret', `/ocp/${props.envName}/cdk/commercetools-subscription-mgmt`),
+ *             secret: Secret.fromSecretNameV2(this, 'CTSecret', `/ct/${props.envName}/commercetools-subscription-mgmt`),
  *             target: new EventbridgeSubscriptionTarget(this.eventBus)
  *         })
  */
