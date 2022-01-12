@@ -1,5 +1,7 @@
 const { awscdk } = require('projen');
-const { NodeProject } = require('projen/lib/javascript');
+const { NodeProject,
+  NpmAccess
+} = require('projen/lib/javascript');
 
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Lars Fronius',
@@ -16,7 +18,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   eslintOptions: {
     ignorePatterns: ['src/commercetools-subscription-provider/**']
   },
-  releaseToNpm: true
+  releaseToNpm: true,
+  npmAccess: NpmAccess.PUBLIC
 });
 
 const lambdaProject = new NodeProject({
