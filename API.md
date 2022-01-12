@@ -4,7 +4,7 @@
 
 ### CommercetoolsSubscription <a name="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription" id="larsfroniuscommercetoolscdkconstructscommercetoolssubscription"></a>
 
-new CommercetoolsSubscription(this, 'CTToEventBusSubscription', {              messages: [ {                  "resourceTypeId" : "product",                  "types: [ ]              }],              changes: [],              projectKey: props.ctProjektKey,              secret: Secret.fromSecretNameV2(this, 'CTSecret', `/ocp/${props.envName}/cdk/commercetools-subscription-mgmt`),              target: new EventbridgeSubscriptionTarget(this.eventBus)          }).
+new CommercetoolsSubscription(this, 'CTToEventBusSubscription', {              messages: [ {                  "resourceTypeId" : "product",                  "types: [ ]              }],              changes: [],              projectKey: props.ctProjektKey,              secret: Secret.fromSecretNameV2(this, 'CTSecret', `/ct/${props.envName}/commercetools-subscription-mgmt`),              target: new EventbridgeSubscriptionTarget(this.eventBus)          }).
 
 #### Initializers <a name="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.Initializer" id="larsfroniuscommercetoolscdkconstructscommercetoolssubscriptioninitializer"></a>
 
