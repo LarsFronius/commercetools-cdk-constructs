@@ -1,6 +1,6 @@
 import { Stack, Token } from 'aws-cdk-lib';
 import { CfnEventBus, EventBus, IEventBus, Rule } from 'aws-cdk-lib/aws-events';
-import { EventBus as EventBusTarget } from 'aws-cdk-lib/aws-events-targets/lib/event-bus';
+import { EventBus as EventBusTarget } from 'aws-cdk-lib/aws-events-targets';
 import { CfnAccessKey, User } from 'aws-cdk-lib/aws-iam';
 import { ITopic, Topic } from 'aws-cdk-lib/aws-sns';
 import { IQueue, Queue } from 'aws-cdk-lib/aws-sqs';
