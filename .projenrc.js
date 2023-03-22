@@ -1,6 +1,7 @@
 const { awscdk } = require('projen');
-const { NodeProject,
-  NpmAccess
+const {
+  NodeProject,
+  NpmAccess,
 } = require('projen/lib/javascript');
 
 const project = new awscdk.AwsCdkConstructLibrary({
@@ -16,10 +17,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   excludeTypescript: ['src/commercetools-subscription-provider/**', 'src/commercetools-api-extension-provider/**'],
   eslint: true,
   eslintOptions: {
-    ignorePatterns: ['src/commercetools-subscription-provider/**', 'src/commercetools-api-extension-provider/**']
+    ignorePatterns: ['src/commercetools-subscription-provider/**', 'src/commercetools-api-extension-provider/**'],
   },
   releaseToNpm: true,
-  npmAccess: NpmAccess.PUBLIC
+  npmAccess: NpmAccess.PUBLIC,
 });
 
 const ctSubscriptionProviderProject = new NodeProject({
@@ -32,12 +33,12 @@ const ctSubscriptionProviderProject = new NodeProject({
   jest: false,
   jestOptions: {
     jestConfig: {
-      rootDir: 'src/commercetools-subscription-provider'
-    }
+      rootDir: 'src/commercetools-subscription-provider',
+    },
   },
   parent: project,
-  outdir: 'src/commercetools-subscription-provider'
-})
+  outdir: 'src/commercetools-subscription-provider',
+});
 
 const ctApiExtensionProviderProject = new NodeProject({
   name: 'commercetools-api-extension-provider',
@@ -49,11 +50,11 @@ const ctApiExtensionProviderProject = new NodeProject({
   jest: false,
   jestOptions: {
     jestConfig: {
-      rootDir: 'src/commercetools-api-extension-provider'
-    }
+      rootDir: 'src/commercetools-api-extension-provider',
+    },
   },
   parent: project,
-  outdir: 'src/commercetools-api-extension-provider'
-})
+  outdir: 'src/commercetools-api-extension-provider',
+});
 
-project.synth()
+project.synth();
