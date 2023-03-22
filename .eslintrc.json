@@ -33,7 +33,8 @@
     }
   },
   "ignorePatterns": [
-    "src/commercetools-subscription-provider/**"
+    "src/commercetools-subscription-provider/**",
+    "src/commercetools-api-extension-provider/**"
   ],
   "rules": {
     "indent": [
@@ -141,6 +142,7 @@
         "devDependencies": [
           "**/test/**",
           "**/build-tools/**",
+          "src/commercetools-api-extension-provider/index.lambda.ts",
           "src/commercetools-subscription-provider/index.lambda.ts"
         ],
         "optionalDependencies": false,

@@ -19,3 +19,11 @@ new CommercetoolsSubscription(this, 'CTToEventBusSubscription', {
 })
 
 ```
+
+the secret format the custom resource expects is in the format of
+```json
+{
+  "CT_CLIENT_ID": "foo",
+  "CT_CLIENT_SECRET": "bar"
+}
+```

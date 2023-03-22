@@ -14,6 +14,7 @@
     ".projen/files.json",
     ".projen/tasks.json",
     "LICENSE",
+    "src/commercetools-api-extension-provider/index-function.ts",
     "src/commercetools-subscription-provider/index-function.ts",
     "tsconfig.dev.json"
   ],

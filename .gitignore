@@ -51,5 +51,6 @@ junit.xml
 tsconfig.json
 !/API.md
 /assets/
+!/src/commercetools-api-extension-provider/index-function.ts
 !/src/commercetools-subscription-provider/index-function.ts
 !/.github/workflows/upgrade-main.yml

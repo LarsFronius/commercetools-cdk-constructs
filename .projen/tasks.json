@@ -45,7 +45,28 @@
       "description": "Prepare assets",
       "steps": [
         {
+          "spawn": "bundle:commercetools-api-extension-provider/index.lambda"
+        },
+        {
           "spawn": "bundle:commercetools-subscription-provider/index.lambda"
+        }
+      ]
+    },
+    "bundle:commercetools-api-extension-provider/index.lambda": {
+      "name": "bundle:commercetools-api-extension-provider/index.lambda",
+      "description": "Create a JavaScript bundle from src/commercetools-api-extension-provider/index.lambda.ts",
+      "steps": [
+        {
+          "exec": "esbuild --bundle src/commercetools-api-extension-provider/index.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"assets/commercetools-api-extension-provider/index.lambda/index.js\" --external:aws-sdk"
+        }
+      ]
+    },
+    "bundle:commercetools-api-extension-provider/index.lambda:watch": {
+      "name": "bundle:commercetools-api-extension-provider/index.lambda:watch",
+      "description": "Continuously update the JavaScript bundle from src/commercetools-api-extension-provider/index.lambda.ts",
+      "steps": [
+        {
+          "exec": "esbuild --bundle src/commercetools-api-extension-provider/index.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"assets/commercetools-api-extension-provider/index.lambda/index.js\" --external:aws-sdk --watch"
         }
       ]
     },
