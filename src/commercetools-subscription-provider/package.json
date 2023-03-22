@@ -2,7 +2,6 @@
   "name": "commercetools-subscription-provider",
   "scripts": {
     "build": "npx projen build",
-    "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "default": "npx projen default",
     "package": "npx projen package",
@@ -11,13 +10,12 @@
     "pre-compile": "npx projen pre-compile",
     "test": "npx projen test",
     "upgrade": "npx projen upgrade",
-    "upgrade-projen": "npx projen upgrade-projen",
     "projen": "npx projen"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.89",
     "esbuild": "^0.14.10",
-    "npm-check-updates": "^12",
+    "npm-check-updates": "^16",
     "projen": "^0.50.9",
     "typescript": "^4.5.4"
   },

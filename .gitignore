@@ -4,7 +4,6 @@
 !/.projen/deps.json
 !/.projen/files.json
 !/.github/workflows/pull-request-lint.yml
-!/.github/workflows/stale.yml
 !/package.json
 !/LICENSE
 !/.npmignore
@@ -40,6 +39,7 @@ junit.xml
 /dist/version.txt
 !/.github/workflows/release.yml
 !/.mergify.yml
+!/.github/workflows/upgrade-main.yml
 !/.github/pull_request_template.md
 !/test/
 !/tsconfig.dev.json
@@ -53,4 +53,3 @@ tsconfig.json
 /assets/
 !/src/commercetools-api-extension-provider/index-function.ts
 !/src/commercetools-subscription-provider/index-function.ts
-!/.github/workflows/upgrade-main.yml
