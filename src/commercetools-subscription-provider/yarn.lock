@@ -43,22 +43,22 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
-"@middy/core@^2.5.4":
-  version "2.5.4"
-  resolved "https://registry.yarnpkg.com/@middy/core/-/core-2.5.4.tgz#46287e3a729a5b2e3b199bf688255842e5462f33"
-  integrity sha512-WQFUFhCG0P2rmNDBX8x5RiREfSUnMhq77QyrwIZg2/gLUhuOZa8TPFFKzIFBz+blvw9Ep41LRrWdV/gzYwMuww==
+"@middy/core@^4.7.0":
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/@middy/core/-/core-4.7.0.tgz#37e055559d5bf05dcb7b288c44644e8ae4255900"
+  integrity sha512-yI++DmhDQ8+ugvY7+GrEnb2PF0M/6Wzbgu4Tf7QhOlhwKGDd4j6or+Ab7qYPWx+jnKf8F0tqlmh0gV4JLi0yHw==
 
-"@middy/secrets-manager@^2.5.4":
-  version "2.5.4"
-  resolved "https://registry.yarnpkg.com/@middy/secrets-manager/-/secrets-manager-2.5.4.tgz#1d357d6933af76dc8bee21cba033dbc31c80a223"
-  integrity sha512-//6IJ5Jqmv7KYYIqXCgui44h88R6z8Oara5snJumQ1SYhh1ginXWmTD+bh22ZPHs/8scKWtSn06sPo08IaUPmQ==
+"@middy/secrets-manager@^4.7.0":
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/@middy/secrets-manager/-/secrets-manager-4.7.0.tgz#09a7d4ef2abfc3a70cf7f23d04c059499ec51491"
+  integrity sha512-eQGrgNMyAOjMkgLHTwIKv8GFn9bcRZ4qeb5IjBLVwOiyMEBnXmWhF+06LsVhjTagKPTDFa6VveQQmSnkKe9mzw==
   dependencies:
-    "@middy/util" "^2.5.4"
+    "@middy/util" "4.7.0"
 
-"@middy/util@^2.5.4":
-  version "2.5.4"
-  resolved "https://registry.yarnpkg.com/@middy/util/-/util-2.5.4.tgz#1cd1689f179b6f43eefe0cdedba717303429d084"
-  integrity sha512-/715LFKuz3EAao+e+4eWjO0fpJbtFjXAAA6nVcShnFKaU/s+P5qqRD9X8+iU+R1q7uFidd4eWnDhmpqJ43ZY8A==
+"@middy/util@4.7.0":
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/@middy/util/-/util-4.7.0.tgz#c278766799db52880c1efebe2efc053d9d36c5ef"
+  integrity sha512-HUh0EOLGzBQjmJks4N12mmEebshtCUwyzdhk59UmAj97zzM0qn0exQvZDfbkY0pb/6b7sNnf7IpFww8Z6YxpWw==
 
 "@oozcitak/dom@1.15.8":
   version "1.15.8"

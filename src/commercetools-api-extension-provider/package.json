@@ -22,8 +22,8 @@
   "dependencies": {
     "@commercetools/platform-sdk": "^2.4.1",
     "@commercetools/sdk-client-v2": "^1.1.0",
-    "@middy/core": "^2.5.7",
-    "@middy/secrets-manager": "^2.5.7"
+    "@middy/core": "^4.7.0",
+    "@middy/secrets-manager": "^4.7.0"
   },
   "main": "index.lambda.ts",
   "license": "Apache-2.0",
