@@ -2,6 +2,7 @@ const { awscdk } = require('projen');
 const {
   NodeProject,
   NpmAccess,
+  UpgradeDependenciesSchedule,
 } = require('projen/lib/javascript');
 
 const project = new awscdk.AwsCdkConstructLibrary({
@@ -16,6 +17,11 @@ const project = new awscdk.AwsCdkConstructLibrary({
   devDeps: ['@aws-cdk/assert'],
   excludeTypescript: ['src/commercetools-subscription-provider/**', 'src/commercetools-api-extension-provider/**'],
   eslint: true,
+  depsUpgradeOptions: {
+    workflowOptions: {
+      schedule: UpgradeDependenciesSchedule.WEEKLY,
+    },
+  },
   eslintOptions: {
     ignorePatterns: ['src/commercetools-subscription-provider/**', 'src/commercetools-api-extension-provider/**'],
   },
