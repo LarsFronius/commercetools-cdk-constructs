@@ -58,7 +58,7 @@
       "description": "Create a JavaScript bundle from src/commercetools-api-extension-provider/index.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/commercetools-api-extension-provider/index.lambda.ts --target=\"node16\" --platform=\"node\" --outfile=\"assets/commercetools-api-extension-provider/index.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:aws-sdk"
+          "exec": "esbuild --bundle src/commercetools-api-extension-provider/index.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/commercetools-api-extension-provider/index.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
         }
       ]
     },
@@ -67,7 +67,7 @@
       "description": "Continuously update the JavaScript bundle from src/commercetools-api-extension-provider/index.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/commercetools-api-extension-provider/index.lambda.ts --target=\"node16\" --platform=\"node\" --outfile=\"assets/commercetools-api-extension-provider/index.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:aws-sdk --watch"
+          "exec": "esbuild --bundle src/commercetools-api-extension-provider/index.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/commercetools-api-extension-provider/index.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
         }
       ]
     },
@@ -76,7 +76,7 @@
       "description": "Create a JavaScript bundle from src/commercetools-subscription-provider/index.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/commercetools-subscription-provider/index.lambda.ts --target=\"node16\" --platform=\"node\" --outfile=\"assets/commercetools-subscription-provider/index.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:aws-sdk"
+          "exec": "esbuild --bundle src/commercetools-subscription-provider/index.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/commercetools-subscription-provider/index.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
         }
       ]
     },
@@ -85,7 +85,7 @@
       "description": "Continuously update the JavaScript bundle from src/commercetools-subscription-provider/index.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/commercetools-subscription-provider/index.lambda.ts --target=\"node16\" --platform=\"node\" --outfile=\"assets/commercetools-subscription-provider/index.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:aws-sdk --watch"
+          "exec": "esbuild --bundle src/commercetools-subscription-provider/index.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/commercetools-subscription-provider/index.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
         }
       ]
     },
@@ -174,7 +174,8 @@
       "description": "Runs eslint against the codebase",
       "steps": [
         {
-          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern src test build-tools .projenrc.js"
+          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern $@ src test build-tools .projenrc.js",
+          "receiveArgs": true
         }
       ]
     },
@@ -315,28 +316,13 @@
       },
       "steps": [
         {
-          "exec": "yarn upgrade npm-check-updates"
-        },
-        {
-          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='aws-cdk-lib,constructs,jsii'"
-        },
-        {
-          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='aws-cdk-lib,constructs,jsii'"
-        },
-        {
-          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='aws-cdk-lib,constructs,jsii'"
-        },
-        {
-          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='aws-cdk-lib,constructs,jsii'"
-        },
-        {
-          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='aws-cdk-lib,constructs,jsii'"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws-cdk/assert,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,esbuild,eslint-import-resolver-typescript,eslint-plugin-import,eslint,jest-junit,jest,jsii-diff,jsii-docgen,jsii-pacmak,projen,standard-version,ts-jest,typescript,aws-cdk-lib,constructs"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade"
+          "exec": "yarn upgrade @aws-cdk/assert @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser esbuild eslint-import-resolver-typescript eslint-plugin-import eslint jest-junit jest jsii-diff jsii-docgen jsii-pacmak projen standard-version ts-jest typescript aws-cdk-lib constructs"
         },
         {
           "exec": "npx projen"
@@ -357,7 +343,7 @@
     }
   },
   "env": {
-    "PATH": "$(npx -c \"node -e \\\"console.log(process.env.PATH)\\\"\")"
+    "PATH": "$(npx -c \"node --print process.env.PATH\")"
   },
   "//": "~~ Generated by projen. To modify, edit .projenrc.js and run \"npx projen\"."
 }
