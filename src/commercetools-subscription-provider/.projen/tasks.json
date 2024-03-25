@@ -89,7 +89,7 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/aws-lambda,constructs,esbuild,projen,typescript,@commercetools/platform-sdk,@commercetools/sdk-client-v2,@middy/core,@middy/secrets-manager"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/aws-lambda,esbuild,projen,typescript,@commercetools/platform-sdk,@commercetools/sdk-client-v2,@middy/core,@middy/secrets-manager"
         },
         {
           "exec": "yarn install --check-files"
