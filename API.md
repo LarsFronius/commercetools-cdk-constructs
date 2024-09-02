@@ -1,12 +1,12 @@
 # API Reference <a name="API Reference" id="api-reference"></a>
 
-## Constructs <a name="Constructs" id="constructs"></a>
+## Constructs <a name="Constructs" id="Constructs"></a>
 
-### CommercetoolsSubscription <a name="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription" id="larsfroniuscommercetoolscdkconstructscommercetoolssubscription"></a>
+### CommercetoolsSubscription <a name="CommercetoolsSubscription" id="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription"></a>
 
 new CommercetoolsSubscription(this, 'CTToEventBusSubscription', {              messages: [ {                  "resourceTypeId" : "product",                  "types: [ ]              }],              changes: [],              projectKey: props.ctProjektKey,              secret: Secret.fromSecretNameV2(this, 'CTSecret', `/ct/${props.envName}/commercetools-subscription-mgmt`),              target: new EventbridgeSubscriptionTarget(this.eventBus)          }).
 
-#### Initializers <a name="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.Initializer" id="larsfroniuscommercetoolscdkconstructscommercetoolssubscriptioninitializer"></a>
+#### Initializers <a name="Initializers" id="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.Initializer"></a>
 
 ```typescript
 import { CommercetoolsSubscription } from '@larsfronius/commercetools-cdk-constructs'
@@ -16,78 +16,145 @@ new CommercetoolsSubscription(scope: Construct, id: string, props: ICommercetool
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`scope`](#larsfroniuscommercetoolscdkconstructscommercetoolssubscriptionparameterscope)<span title="Required">*</span> | [`constructs.Construct`](#constructs.Construct) | *No description.* |
-| [`id`](#larsfroniuscommercetoolscdkconstructscommercetoolssubscriptionparameterid)<span title="Required">*</span> | `string` | *No description.* |
-| [`props`](#larsfroniuscommercetoolscdkconstructscommercetoolssubscriptionparameterprops)<span title="Required">*</span> | [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps) | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.Initializer.parameter.props">props</a></code> | <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps">ICommercetoolsSubscriptionProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.parameter.scope" id="larsfroniuscommercetoolscdkconstructscommercetoolssubscriptionparameterscope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.Initializer.parameter.scope"></a>
 
-- *Type:* [`constructs.Construct`](#constructs.Construct)
-
----
-
-##### `id`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.parameter.id" id="larsfroniuscommercetoolscdkconstructscommercetoolssubscriptionparameterid"></a>
-
-- *Type:* `string`
+- *Type:* constructs.Construct
 
 ---
 
-##### `props`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.parameter.props" id="larsfroniuscommercetoolscdkconstructscommercetoolssubscriptionparameterprops"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.Initializer.parameter.id"></a>
 
-- *Type:* [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps)
+- *Type:* string
 
 ---
 
+##### `props`<sup>Required</sup> <a name="props" id="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.Initializer.parameter.props"></a>
 
+- *Type:* <a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps">ICommercetoolsSubscriptionProps</a>
 
-#### Properties <a name="Properties" id="properties"></a>
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### `isConstruct` <a name="isConstruct" id="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.isConstruct"></a>
+
+```typescript
+import { CommercetoolsSubscription } from '@larsfronius/commercetools-cdk-constructs'
+
+CommercetoolsSubscription.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+###### `x`<sup>Required</sup> <a name="x" id="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`id`](#larsfroniuscommercetoolscdkconstructscommercetoolssubscriptionpropertyid)<span title="Required">*</span> | [`aws-cdk-lib.Reference`](#aws-cdk-lib.Reference) | *No description.* |
-| [`version`](#larsfroniuscommercetoolscdkconstructscommercetoolssubscriptionpropertyversion)<span title="Required">*</span> | [`aws-cdk-lib.Reference`](#aws-cdk-lib.Reference) | *No description.* |
-| [`eventBridgeSource`](#larsfroniuscommercetoolscdkconstructscommercetoolssubscriptionpropertyeventbridgesource) | [`aws-cdk-lib.Reference`](#aws-cdk-lib.Reference) | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.property.id">id</a></code> | <code>aws-cdk-lib.Reference</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.property.version">version</a></code> | <code>aws-cdk-lib.Reference</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.property.eventBridgeSource">eventBridgeSource</a></code> | <code>aws-cdk-lib.Reference</code> | *No description.* |
 
 ---
 
-##### `id`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.property.id" id="larsfroniuscommercetoolscdkconstructscommercetoolssubscriptionpropertyid"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.property.id"></a>
 
 ```typescript
 public readonly id: Reference;
 ```
 
-- *Type:* [`aws-cdk-lib.Reference`](#aws-cdk-lib.Reference)
+- *Type:* aws-cdk-lib.Reference
 
 ---
 
-##### `version`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.property.version" id="larsfroniuscommercetoolscdkconstructscommercetoolssubscriptionpropertyversion"></a>
+##### `version`<sup>Required</sup> <a name="version" id="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.property.version"></a>
 
 ```typescript
 public readonly version: Reference;
 ```
 
-- *Type:* [`aws-cdk-lib.Reference`](#aws-cdk-lib.Reference)
+- *Type:* aws-cdk-lib.Reference
 
 ---
 
-##### `eventBridgeSource`<sup>Optional</sup> <a name="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.property.eventBridgeSource" id="larsfroniuscommercetoolscdkconstructscommercetoolssubscriptionpropertyeventbridgesource"></a>
+##### `eventBridgeSource`<sup>Optional</sup> <a name="eventBridgeSource" id="@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription.property.eventBridgeSource"></a>
 
 ```typescript
 public readonly eventBridgeSource: Reference;
 ```
 
-- *Type:* [`aws-cdk-lib.Reference`](#aws-cdk-lib.Reference)
+- *Type:* aws-cdk-lib.Reference
 
 ---
 
 
-## Structs <a name="Structs" id="structs"></a>
+## Structs <a name="Structs" id="Structs"></a>
 
-### EventBridgeDestination <a name="@larsfronius/commercetools-cdk-constructs.EventBridgeDestination" id="larsfroniuscommercetoolscdkconstructseventbridgedestination"></a>
+### EventBridgeDestination <a name="EventBridgeDestination" id="@larsfronius/commercetools-cdk-constructs.EventBridgeDestination"></a>
 
-#### Initializer <a name="[object Object].Initializer" id="object-objectinitializer"></a>
+#### Initializer <a name="Initializer" id="@larsfronius/commercetools-cdk-constructs.EventBridgeDestination.Initializer"></a>
 
 ```typescript
 import { EventBridgeDestination } from '@larsfronius/commercetools-cdk-constructs'
@@ -95,49 +162,49 @@ import { EventBridgeDestination } from '@larsfronius/commercetools-cdk-construct
 const eventBridgeDestination: EventBridgeDestination = { ... }
 ```
 
-#### Properties <a name="Properties" id="properties"></a>
+#### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`accountId`](#larsfroniuscommercetoolscdkconstructseventbridgedestinationpropertyaccountid)<span title="Required">*</span> | `string` | *No description.* |
-| [`region`](#larsfroniuscommercetoolscdkconstructseventbridgedestinationpropertyregion)<span title="Required">*</span> | `string` | *No description.* |
-| [`type`](#larsfroniuscommercetoolscdkconstructseventbridgedestinationpropertytype)<span title="Required">*</span> | `string` | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.EventBridgeDestination.property.accountId">accountId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.EventBridgeDestination.property.region">region</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.EventBridgeDestination.property.type">type</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `accountId`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.EventBridgeDestination.property.accountId" id="larsfroniuscommercetoolscdkconstructseventbridgedestinationpropertyaccountid"></a>
+##### `accountId`<sup>Required</sup> <a name="accountId" id="@larsfronius/commercetools-cdk-constructs.EventBridgeDestination.property.accountId"></a>
 
 ```typescript
 public readonly accountId: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-##### `region`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.EventBridgeDestination.property.region" id="larsfroniuscommercetoolscdkconstructseventbridgedestinationpropertyregion"></a>
+##### `region`<sup>Required</sup> <a name="region" id="@larsfronius/commercetools-cdk-constructs.EventBridgeDestination.property.region"></a>
 
 ```typescript
 public readonly region: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-##### `type`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.EventBridgeDestination.property.type" id="larsfroniuscommercetoolscdkconstructseventbridgedestinationpropertytype"></a>
+##### `type`<sup>Required</sup> <a name="type" id="@larsfronius/commercetools-cdk-constructs.EventBridgeDestination.property.type"></a>
 
 ```typescript
 public readonly type: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-### SnsDestination <a name="@larsfronius/commercetools-cdk-constructs.SnsDestination" id="larsfroniuscommercetoolscdkconstructssnsdestination"></a>
+### SnsDestination <a name="SnsDestination" id="@larsfronius/commercetools-cdk-constructs.SnsDestination"></a>
 
-#### Initializer <a name="[object Object].Initializer" id="object-objectinitializer"></a>
+#### Initializer <a name="Initializer" id="@larsfronius/commercetools-cdk-constructs.SnsDestination.Initializer"></a>
 
 ```typescript
 import { SnsDestination } from '@larsfronius/commercetools-cdk-constructs'
@@ -145,60 +212,60 @@ import { SnsDestination } from '@larsfronius/commercetools-cdk-constructs'
 const snsDestination: SnsDestination = { ... }
 ```
 
-#### Properties <a name="Properties" id="properties"></a>
+#### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`accessKey`](#larsfroniuscommercetoolscdkconstructssnsdestinationpropertyaccesskey)<span title="Required">*</span> | `string` | *No description.* |
-| [`accessSecret`](#larsfroniuscommercetoolscdkconstructssnsdestinationpropertyaccesssecret)<span title="Required">*</span> | `string` | *No description.* |
-| [`topicArn`](#larsfroniuscommercetoolscdkconstructssnsdestinationpropertytopicarn)<span title="Required">*</span> | `string` | *No description.* |
-| [`type`](#larsfroniuscommercetoolscdkconstructssnsdestinationpropertytype)<span title="Required">*</span> | `string` | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SnsDestination.property.accessKey">accessKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SnsDestination.property.accessSecret">accessSecret</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SnsDestination.property.topicArn">topicArn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SnsDestination.property.type">type</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `accessKey`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.SnsDestination.property.accessKey" id="larsfroniuscommercetoolscdkconstructssnsdestinationpropertyaccesskey"></a>
+##### `accessKey`<sup>Required</sup> <a name="accessKey" id="@larsfronius/commercetools-cdk-constructs.SnsDestination.property.accessKey"></a>
 
 ```typescript
 public readonly accessKey: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-##### `accessSecret`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.SnsDestination.property.accessSecret" id="larsfroniuscommercetoolscdkconstructssnsdestinationpropertyaccesssecret"></a>
+##### `accessSecret`<sup>Required</sup> <a name="accessSecret" id="@larsfronius/commercetools-cdk-constructs.SnsDestination.property.accessSecret"></a>
 
 ```typescript
 public readonly accessSecret: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-##### `topicArn`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.SnsDestination.property.topicArn" id="larsfroniuscommercetoolscdkconstructssnsdestinationpropertytopicarn"></a>
+##### `topicArn`<sup>Required</sup> <a name="topicArn" id="@larsfronius/commercetools-cdk-constructs.SnsDestination.property.topicArn"></a>
 
 ```typescript
 public readonly topicArn: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-##### `type`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.SnsDestination.property.type" id="larsfroniuscommercetoolscdkconstructssnsdestinationpropertytype"></a>
+##### `type`<sup>Required</sup> <a name="type" id="@larsfronius/commercetools-cdk-constructs.SnsDestination.property.type"></a>
 
 ```typescript
 public readonly type: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-### SqsDestination <a name="@larsfronius/commercetools-cdk-constructs.SqsDestination" id="larsfroniuscommercetoolscdkconstructssqsdestination"></a>
+### SqsDestination <a name="SqsDestination" id="@larsfronius/commercetools-cdk-constructs.SqsDestination"></a>
 
-#### Initializer <a name="[object Object].Initializer" id="object-objectinitializer"></a>
+#### Initializer <a name="Initializer" id="@larsfronius/commercetools-cdk-constructs.SqsDestination.Initializer"></a>
 
 ```typescript
 import { SqsDestination } from '@larsfronius/commercetools-cdk-constructs'
@@ -206,75 +273,75 @@ import { SqsDestination } from '@larsfronius/commercetools-cdk-constructs'
 const sqsDestination: SqsDestination = { ... }
 ```
 
-#### Properties <a name="Properties" id="properties"></a>
+#### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`accessKey`](#larsfroniuscommercetoolscdkconstructssqsdestinationpropertyaccesskey)<span title="Required">*</span> | `string` | *No description.* |
-| [`accessSecret`](#larsfroniuscommercetoolscdkconstructssqsdestinationpropertyaccesssecret)<span title="Required">*</span> | `string` | *No description.* |
-| [`queueUrl`](#larsfroniuscommercetoolscdkconstructssqsdestinationpropertyqueueurl)<span title="Required">*</span> | `string` | *No description.* |
-| [`region`](#larsfroniuscommercetoolscdkconstructssqsdestinationpropertyregion)<span title="Required">*</span> | `string` | *No description.* |
-| [`type`](#larsfroniuscommercetoolscdkconstructssqsdestinationpropertytype)<span title="Required">*</span> | `string` | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SqsDestination.property.accessKey">accessKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SqsDestination.property.accessSecret">accessSecret</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SqsDestination.property.queueUrl">queueUrl</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SqsDestination.property.region">region</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SqsDestination.property.type">type</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `accessKey`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.SqsDestination.property.accessKey" id="larsfroniuscommercetoolscdkconstructssqsdestinationpropertyaccesskey"></a>
+##### `accessKey`<sup>Required</sup> <a name="accessKey" id="@larsfronius/commercetools-cdk-constructs.SqsDestination.property.accessKey"></a>
 
 ```typescript
 public readonly accessKey: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-##### `accessSecret`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.SqsDestination.property.accessSecret" id="larsfroniuscommercetoolscdkconstructssqsdestinationpropertyaccesssecret"></a>
+##### `accessSecret`<sup>Required</sup> <a name="accessSecret" id="@larsfronius/commercetools-cdk-constructs.SqsDestination.property.accessSecret"></a>
 
 ```typescript
 public readonly accessSecret: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-##### `queueUrl`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.SqsDestination.property.queueUrl" id="larsfroniuscommercetoolscdkconstructssqsdestinationpropertyqueueurl"></a>
+##### `queueUrl`<sup>Required</sup> <a name="queueUrl" id="@larsfronius/commercetools-cdk-constructs.SqsDestination.property.queueUrl"></a>
 
 ```typescript
 public readonly queueUrl: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-##### `region`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.SqsDestination.property.region" id="larsfroniuscommercetoolscdkconstructssqsdestinationpropertyregion"></a>
+##### `region`<sup>Required</sup> <a name="region" id="@larsfronius/commercetools-cdk-constructs.SqsDestination.property.region"></a>
 
 ```typescript
 public readonly region: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-##### `type`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.SqsDestination.property.type" id="larsfroniuscommercetoolscdkconstructssqsdestinationpropertytype"></a>
+##### `type`<sup>Required</sup> <a name="type" id="@larsfronius/commercetools-cdk-constructs.SqsDestination.property.type"></a>
 
 ```typescript
 public readonly type: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-## Classes <a name="Classes" id="classes"></a>
+## Classes <a name="Classes" id="Classes"></a>
 
-### EventbridgeSubscriptionTarget <a name="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget" id="larsfroniuscommercetoolscdkconstructseventbridgesubscriptiontarget"></a>
+### EventbridgeSubscriptionTarget <a name="EventbridgeSubscriptionTarget" id="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget"></a>
 
-- *Implements:* [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget)
+- *Implements:* <a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget">ICommercetoolsSubscriptionTarget</a>
 
-#### Initializers <a name="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.Initializer" id="larsfroniuscommercetoolscdkconstructseventbridgesubscriptiontargetinitializer"></a>
+#### Initializers <a name="Initializers" id="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.Initializer"></a>
 
 ```typescript
 import { EventbridgeSubscriptionTarget } from '@larsfronius/commercetools-cdk-constructs'
@@ -284,74 +351,74 @@ new EventbridgeSubscriptionTarget(eventbus?: IEventBus)
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`eventbus`](#larsfroniuscommercetoolscdkconstructseventbridgesubscriptiontargetparametereventbus) | [`aws-cdk-lib.aws_events.IEventBus`](#aws-cdk-lib.aws_events.IEventBus) | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.Initializer.parameter.eventbus">eventbus</a></code> | <code>aws-cdk-lib.aws_events.IEventBus</code> | *No description.* |
 
 ---
 
-##### `eventbus`<sup>Optional</sup> <a name="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.parameter.eventbus" id="larsfroniuscommercetoolscdkconstructseventbridgesubscriptiontargetparametereventbus"></a>
+##### `eventbus`<sup>Optional</sup> <a name="eventbus" id="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.Initializer.parameter.eventbus"></a>
 
-- *Type:* [`aws-cdk-lib.aws_events.IEventBus`](#aws-cdk-lib.aws_events.IEventBus)
+- *Type:* aws-cdk-lib.aws_events.IEventBus
 
 ---
 
-#### Methods <a name="Methods" id="methods"></a>
+#### Methods <a name="Methods" id="Methods"></a>
 
 | **Name** | **Description** |
 | --- | --- |
-| [`getDestination`](#larsfroniuscommercetoolscdkconstructseventbridgesubscriptiontargetgetdestination) | *No description.* |
-| [`postSubscription`](#larsfroniuscommercetoolscdkconstructseventbridgesubscriptiontargetpostsubscription) | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.getDestination">getDestination</a></code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.postSubscription">postSubscription</a></code> | *No description.* |
 
 ---
 
-##### `getDestination` <a name="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.getDestination" id="larsfroniuscommercetoolscdkconstructseventbridgesubscriptiontargetgetdestination"></a>
+##### `getDestination` <a name="getDestination" id="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.getDestination"></a>
 
 ```typescript
-public getDestination(scope: Construct)
+public getDestination(scope: Construct): SnsDestination | SqsDestination | EventBridgeDestination
 ```
 
-###### `scope`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.parameter.scope" id="larsfroniuscommercetoolscdkconstructseventbridgesubscriptiontargetparameterscope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.getDestination.parameter.scope"></a>
 
-- *Type:* [`constructs.Construct`](#constructs.Construct)
+- *Type:* constructs.Construct
 
 ---
 
-##### `postSubscription` <a name="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.postSubscription" id="larsfroniuscommercetoolscdkconstructseventbridgesubscriptiontargetpostsubscription"></a>
+##### `postSubscription` <a name="postSubscription" id="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.postSubscription"></a>
 
 ```typescript
-public postSubscription(subscription: CommercetoolsSubscription)
+public postSubscription(subscription: CommercetoolsSubscription): void
 ```
 
-###### `subscription`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.parameter.subscription" id="larsfroniuscommercetoolscdkconstructseventbridgesubscriptiontargetparametersubscription"></a>
+###### `subscription`<sup>Required</sup> <a name="subscription" id="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.postSubscription.parameter.subscription"></a>
 
-- *Type:* [`@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription`](#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription)
+- *Type:* <a href="#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription">CommercetoolsSubscription</a>
 
 ---
 
 
-#### Properties <a name="Properties" id="properties"></a>
+#### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`eventBus`](#larsfroniuscommercetoolscdkconstructseventbridgesubscriptiontargetpropertyeventbus) | [`aws-cdk-lib.aws_events.IEventBus`](#aws-cdk-lib.aws_events.IEventBus) | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.property.eventBus">eventBus</a></code> | <code>aws-cdk-lib.aws_events.IEventBus</code> | *No description.* |
 
 ---
 
-##### `eventBus`<sup>Optional</sup> <a name="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.property.eventBus" id="larsfroniuscommercetoolscdkconstructseventbridgesubscriptiontargetpropertyeventbus"></a>
+##### `eventBus`<sup>Optional</sup> <a name="eventBus" id="@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget.property.eventBus"></a>
 
 ```typescript
 public readonly eventBus: IEventBus;
 ```
 
-- *Type:* [`aws-cdk-lib.aws_events.IEventBus`](#aws-cdk-lib.aws_events.IEventBus)
+- *Type:* aws-cdk-lib.aws_events.IEventBus
 
 ---
 
 
-### SnsSubscriptionTarget <a name="@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget" id="larsfroniuscommercetoolscdkconstructssnssubscriptiontarget"></a>
+### SnsSubscriptionTarget <a name="SnsSubscriptionTarget" id="@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget"></a>
 
-- *Implements:* [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget)
+- *Implements:* <a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget">ICommercetoolsSubscriptionTarget</a>
 
-#### Initializers <a name="@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.Initializer" id="larsfroniuscommercetoolscdkconstructssnssubscriptiontargetinitializer"></a>
+#### Initializers <a name="Initializers" id="@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.Initializer"></a>
 
 ```typescript
 import { SnsSubscriptionTarget } from '@larsfronius/commercetools-cdk-constructs'
@@ -361,61 +428,61 @@ new SnsSubscriptionTarget(topic?: ITopic)
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`topic`](#larsfroniuscommercetoolscdkconstructssnssubscriptiontargetparametertopic) | [`aws-cdk-lib.aws_sns.ITopic`](#aws-cdk-lib.aws_sns.ITopic) | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.Initializer.parameter.topic">topic</a></code> | <code>aws-cdk-lib.aws_sns.ITopic</code> | *No description.* |
 
 ---
 
-##### `topic`<sup>Optional</sup> <a name="@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.parameter.topic" id="larsfroniuscommercetoolscdkconstructssnssubscriptiontargetparametertopic"></a>
+##### `topic`<sup>Optional</sup> <a name="topic" id="@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.Initializer.parameter.topic"></a>
 
-- *Type:* [`aws-cdk-lib.aws_sns.ITopic`](#aws-cdk-lib.aws_sns.ITopic)
+- *Type:* aws-cdk-lib.aws_sns.ITopic
 
 ---
 
-#### Methods <a name="Methods" id="methods"></a>
+#### Methods <a name="Methods" id="Methods"></a>
 
 | **Name** | **Description** |
 | --- | --- |
-| [`getDestination`](#larsfroniuscommercetoolscdkconstructssnssubscriptiontargetgetdestination) | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.getDestination">getDestination</a></code> | *No description.* |
 
 ---
 
-##### `getDestination` <a name="@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.getDestination" id="larsfroniuscommercetoolscdkconstructssnssubscriptiontargetgetdestination"></a>
+##### `getDestination` <a name="getDestination" id="@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.getDestination"></a>
 
 ```typescript
-public getDestination(scope: Construct)
+public getDestination(scope: Construct): SnsDestination | SqsDestination | EventBridgeDestination
 ```
 
-###### `scope`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.parameter.scope" id="larsfroniuscommercetoolscdkconstructssnssubscriptiontargetparameterscope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.getDestination.parameter.scope"></a>
 
-- *Type:* [`constructs.Construct`](#constructs.Construct)
+- *Type:* constructs.Construct
 
 ---
 
 
-#### Properties <a name="Properties" id="properties"></a>
+#### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`snsTopic`](#larsfroniuscommercetoolscdkconstructssnssubscriptiontargetpropertysnstopic) | [`aws-cdk-lib.aws_sns.ITopic`](#aws-cdk-lib.aws_sns.ITopic) | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.property.snsTopic">snsTopic</a></code> | <code>aws-cdk-lib.aws_sns.ITopic</code> | *No description.* |
 
 ---
 
-##### `snsTopic`<sup>Optional</sup> <a name="@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.property.snsTopic" id="larsfroniuscommercetoolscdkconstructssnssubscriptiontargetpropertysnstopic"></a>
+##### `snsTopic`<sup>Optional</sup> <a name="snsTopic" id="@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget.property.snsTopic"></a>
 
 ```typescript
 public readonly snsTopic: ITopic;
 ```
 
-- *Type:* [`aws-cdk-lib.aws_sns.ITopic`](#aws-cdk-lib.aws_sns.ITopic)
+- *Type:* aws-cdk-lib.aws_sns.ITopic
 
 ---
 
 
-### SQSSubscriptionTarget <a name="@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget" id="larsfroniuscommercetoolscdkconstructssqssubscriptiontarget"></a>
+### SQSSubscriptionTarget <a name="SQSSubscriptionTarget" id="@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget"></a>
 
-- *Implements:* [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget)
+- *Implements:* <a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget">ICommercetoolsSubscriptionTarget</a>
 
-#### Initializers <a name="@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.Initializer" id="larsfroniuscommercetoolscdkconstructssqssubscriptiontargetinitializer"></a>
+#### Initializers <a name="Initializers" id="@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.Initializer"></a>
 
 ```typescript
 import { SQSSubscriptionTarget } from '@larsfronius/commercetools-cdk-constructs'
@@ -425,193 +492,193 @@ new SQSSubscriptionTarget(queue?: IQueue)
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`queue`](#larsfroniuscommercetoolscdkconstructssqssubscriptiontargetparameterqueue) | [`aws-cdk-lib.aws_sqs.IQueue`](#aws-cdk-lib.aws_sqs.IQueue) | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.Initializer.parameter.queue">queue</a></code> | <code>aws-cdk-lib.aws_sqs.IQueue</code> | *No description.* |
 
 ---
 
-##### `queue`<sup>Optional</sup> <a name="@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.parameter.queue" id="larsfroniuscommercetoolscdkconstructssqssubscriptiontargetparameterqueue"></a>
+##### `queue`<sup>Optional</sup> <a name="queue" id="@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.Initializer.parameter.queue"></a>
 
-- *Type:* [`aws-cdk-lib.aws_sqs.IQueue`](#aws-cdk-lib.aws_sqs.IQueue)
+- *Type:* aws-cdk-lib.aws_sqs.IQueue
 
 ---
 
-#### Methods <a name="Methods" id="methods"></a>
+#### Methods <a name="Methods" id="Methods"></a>
 
 | **Name** | **Description** |
 | --- | --- |
-| [`getDestination`](#larsfroniuscommercetoolscdkconstructssqssubscriptiontargetgetdestination) | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.getDestination">getDestination</a></code> | *No description.* |
 
 ---
 
-##### `getDestination` <a name="@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.getDestination" id="larsfroniuscommercetoolscdkconstructssqssubscriptiontargetgetdestination"></a>
+##### `getDestination` <a name="getDestination" id="@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.getDestination"></a>
 
 ```typescript
-public getDestination(scope: Construct)
+public getDestination(scope: Construct): SnsDestination | SqsDestination | EventBridgeDestination
 ```
 
-###### `scope`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.parameter.scope" id="larsfroniuscommercetoolscdkconstructssqssubscriptiontargetparameterscope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.getDestination.parameter.scope"></a>
 
-- *Type:* [`constructs.Construct`](#constructs.Construct)
+- *Type:* constructs.Construct
 
 ---
 
 
-#### Properties <a name="Properties" id="properties"></a>
+#### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`queue`](#larsfroniuscommercetoolscdkconstructssqssubscriptiontargetpropertyqueue) | [`aws-cdk-lib.aws_sqs.IQueue`](#aws-cdk-lib.aws_sqs.IQueue) | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.property.queue">queue</a></code> | <code>aws-cdk-lib.aws_sqs.IQueue</code> | *No description.* |
 
 ---
 
-##### `queue`<sup>Optional</sup> <a name="@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.property.queue" id="larsfroniuscommercetoolscdkconstructssqssubscriptiontargetpropertyqueue"></a>
+##### `queue`<sup>Optional</sup> <a name="queue" id="@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget.property.queue"></a>
 
 ```typescript
 public readonly queue: IQueue;
 ```
 
-- *Type:* [`aws-cdk-lib.aws_sqs.IQueue`](#aws-cdk-lib.aws_sqs.IQueue)
+- *Type:* aws-cdk-lib.aws_sqs.IQueue
 
 ---
 
 
-## Protocols <a name="Protocols" id="protocols"></a>
+## Protocols <a name="Protocols" id="Protocols"></a>
 
-### ICommercetoolsChangeSubscription <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription" id="larsfroniuscommercetoolscdkconstructsicommercetoolschangesubscription"></a>
+### ICommercetoolsChangeSubscription <a name="ICommercetoolsChangeSubscription" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription"></a>
 
-- *Implemented By:* [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription)
+- *Implemented By:* <a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription">ICommercetoolsChangeSubscription</a>
 
 
-#### Properties <a name="Properties" id="properties"></a>
+#### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`resourceTypeId`](#larsfroniuscommercetoolscdkconstructsicommercetoolschangesubscriptionpropertyresourcetypeid)<span title="Required">*</span> | `string` | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription.property.resourceTypeId">resourceTypeId</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `resourceTypeId`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription.property.resourceTypeId" id="larsfroniuscommercetoolscdkconstructsicommercetoolschangesubscriptionpropertyresourcetypeid"></a>
+##### `resourceTypeId`<sup>Required</sup> <a name="resourceTypeId" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription.property.resourceTypeId"></a>
 
 ```typescript
 public readonly resourceTypeId: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-### ICommercetoolsMessageSubscription <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription" id="larsfroniuscommercetoolscdkconstructsicommercetoolsmessagesubscription"></a>
+### ICommercetoolsMessageSubscription <a name="ICommercetoolsMessageSubscription" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription"></a>
 
-- *Implemented By:* [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription)
+- *Implemented By:* <a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription">ICommercetoolsMessageSubscription</a>
 
 
-#### Properties <a name="Properties" id="properties"></a>
+#### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`resourceTypeId`](#larsfroniuscommercetoolscdkconstructsicommercetoolsmessagesubscriptionpropertyresourcetypeid)<span title="Required">*</span> | `string` | *No description.* |
-| [`types`](#larsfroniuscommercetoolscdkconstructsicommercetoolsmessagesubscriptionpropertytypes)<span title="Required">*</span> | `string`[] | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription.property.resourceTypeId">resourceTypeId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription.property.types">types</a></code> | <code>string[]</code> | *No description.* |
 
 ---
 
-##### `resourceTypeId`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription.property.resourceTypeId" id="larsfroniuscommercetoolscdkconstructsicommercetoolsmessagesubscriptionpropertyresourcetypeid"></a>
+##### `resourceTypeId`<sup>Required</sup> <a name="resourceTypeId" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription.property.resourceTypeId"></a>
 
 ```typescript
 public readonly resourceTypeId: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-##### `types`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription.property.types" id="larsfroniuscommercetoolscdkconstructsicommercetoolsmessagesubscriptionpropertytypes"></a>
+##### `types`<sup>Required</sup> <a name="types" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription.property.types"></a>
 
 ```typescript
 public readonly types: string[];
 ```
 
-- *Type:* `string`[]
+- *Type:* string[]
 
 ---
 
-### ICommercetoolsSubscriptionProps <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionprops"></a>
+### ICommercetoolsSubscriptionProps <a name="ICommercetoolsSubscriptionProps" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps"></a>
 
-- *Implemented By:* [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps)
+- *Implemented By:* <a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps">ICommercetoolsSubscriptionProps</a>
 
 
-#### Properties <a name="Properties" id="properties"></a>
+#### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`changes`](#larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertychanges)<span title="Required">*</span> | [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription)[] | *No description.* |
-| [`messages`](#larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertymessages)<span title="Required">*</span> | [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription)[] | *No description.* |
-| [`projectKey`](#larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertyprojectkey)<span title="Required">*</span> | `string` | *No description.* |
-| [`secret`](#larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertysecret)<span title="Required">*</span> | [`aws-cdk-lib.aws_secretsmanager.ISecret`](#aws-cdk-lib.aws_secretsmanager.ISecret) | *No description.* |
-| [`target`](#larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertytarget)<span title="Required">*</span> | [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget) | target is one of EventbridgeSubscriptionTarget, SQSSubscriptionTarget or SnsSubscriptionTarget. |
-| [`baseUri`](#larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertybaseuri) | `string` | baseUri is the base URI of your commercetools instance. |
-| [`oAuthUri`](#larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertyoauthuri) | `string` | oAuthUri is the oauth URI of your commercetools instance. |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.changes">changes</a></code> | <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription">ICommercetoolsChangeSubscription</a>[]</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.messages">messages</a></code> | <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription">ICommercetoolsMessageSubscription</a>[]</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.projectKey">projectKey</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.secret">secret</a></code> | <code>aws-cdk-lib.aws_secretsmanager.ISecret</code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.target">target</a></code> | <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget">ICommercetoolsSubscriptionTarget</a></code> | target is one of EventbridgeSubscriptionTarget, SQSSubscriptionTarget or SnsSubscriptionTarget. |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.baseUri">baseUri</a></code> | <code>string</code> | baseUri is the base URI of your commercetools instance. |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.oAuthUri">oAuthUri</a></code> | <code>string</code> | oAuthUri is the oauth URI of your commercetools instance. |
 
 ---
 
-##### `changes`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.changes" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertychanges"></a>
+##### `changes`<sup>Required</sup> <a name="changes" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.changes"></a>
 
 ```typescript
 public readonly changes: ICommercetoolsChangeSubscription[];
 ```
 
-- *Type:* [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription)[]
+- *Type:* <a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsChangeSubscription">ICommercetoolsChangeSubscription</a>[]
 
 ---
 
-##### `messages`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.messages" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertymessages"></a>
+##### `messages`<sup>Required</sup> <a name="messages" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.messages"></a>
 
 ```typescript
 public readonly messages: ICommercetoolsMessageSubscription[];
 ```
 
-- *Type:* [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription)[]
+- *Type:* <a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsMessageSubscription">ICommercetoolsMessageSubscription</a>[]
 
 ---
 
-##### `projectKey`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.projectKey" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertyprojectkey"></a>
+##### `projectKey`<sup>Required</sup> <a name="projectKey" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.projectKey"></a>
 
 ```typescript
 public readonly projectKey: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 ---
 
-##### `secret`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.secret" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertysecret"></a>
+##### `secret`<sup>Required</sup> <a name="secret" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.secret"></a>
 
 ```typescript
 public readonly secret: ISecret;
 ```
 
-- *Type:* [`aws-cdk-lib.aws_secretsmanager.ISecret`](#aws-cdk-lib.aws_secretsmanager.ISecret)
+- *Type:* aws-cdk-lib.aws_secretsmanager.ISecret
 
 ---
 
-##### `target`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.target" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertytarget"></a>
+##### `target`<sup>Required</sup> <a name="target" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.target"></a>
 
 ```typescript
 public readonly target: ICommercetoolsSubscriptionTarget;
 ```
 
-- *Type:* [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget)
+- *Type:* <a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget">ICommercetoolsSubscriptionTarget</a>
 
 target is one of EventbridgeSubscriptionTarget, SQSSubscriptionTarget or SnsSubscriptionTarget.
 
 ---
 
-##### `baseUri`<sup>Optional</sup> <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.baseUri" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertybaseuri"></a>
+##### `baseUri`<sup>Optional</sup> <a name="baseUri" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.baseUri"></a>
 
 ```typescript
 public readonly baseUri: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 baseUri is the base URI of your commercetools instance.
 
@@ -619,13 +686,13 @@ Defaults to 'https://api.europe-west1.gcp.commercetools.com'
 
 ---
 
-##### `oAuthUri`<sup>Optional</sup> <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.oAuthUri" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptionpropspropertyoauthuri"></a>
+##### `oAuthUri`<sup>Optional</sup> <a name="oAuthUri" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionProps.property.oAuthUri"></a>
 
 ```typescript
 public readonly oAuthUri: string;
 ```
 
-- *Type:* `string`
+- *Type:* string
 
 oAuthUri is the oauth URI of your commercetools instance.
 
@@ -633,40 +700,40 @@ Defaults to 'https://auth.europe-west1.gcp.commercetools.com'
 
 ---
 
-### ICommercetoolsSubscriptionTarget <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptiontarget"></a>
+### ICommercetoolsSubscriptionTarget <a name="ICommercetoolsSubscriptionTarget" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget"></a>
 
-- *Implemented By:* [`@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget`](#@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget), [`@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget`](#@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget), [`@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget`](#@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget), [`@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget`](#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget)
+- *Implemented By:* <a href="#@larsfronius/commercetools-cdk-constructs.EventbridgeSubscriptionTarget">EventbridgeSubscriptionTarget</a>, <a href="#@larsfronius/commercetools-cdk-constructs.SQSSubscriptionTarget">SQSSubscriptionTarget</a>, <a href="#@larsfronius/commercetools-cdk-constructs.SnsSubscriptionTarget">SnsSubscriptionTarget</a>, <a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget">ICommercetoolsSubscriptionTarget</a>
 
-#### Methods <a name="Methods" id="methods"></a>
+#### Methods <a name="Methods" id="Methods"></a>
 
 | **Name** | **Description** |
 | --- | --- |
-| [`getDestination`](#larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptiontargetgetdestination) | *No description.* |
-| [`postSubscription`](#larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptiontargetpostsubscription) | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget.getDestination">getDestination</a></code> | *No description.* |
+| <code><a href="#@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget.postSubscription">postSubscription</a></code> | *No description.* |
 
 ---
 
-##### `getDestination` <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget.getDestination" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptiontargetgetdestination"></a>
+##### `getDestination` <a name="getDestination" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget.getDestination"></a>
 
 ```typescript
-public getDestination(scope: Construct)
+public getDestination(scope: Construct): SnsDestination | SqsDestination | EventBridgeDestination
 ```
 
-###### `scope`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget.parameter.scope" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptiontargetparameterscope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget.getDestination.parameter.scope"></a>
 
-- *Type:* [`constructs.Construct`](#constructs.Construct)
+- *Type:* constructs.Construct
 
 ---
 
-##### `postSubscription` <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget.postSubscription" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptiontargetpostsubscription"></a>
+##### `postSubscription` <a name="postSubscription" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget.postSubscription"></a>
 
 ```typescript
-public postSubscription(subscription: CommercetoolsSubscription)
+public postSubscription(subscription: CommercetoolsSubscription): void
 ```
 
-###### `subscription`<sup>Required</sup> <a name="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget.parameter.subscription" id="larsfroniuscommercetoolscdkconstructsicommercetoolssubscriptiontargetparametersubscription"></a>
+###### `subscription`<sup>Required</sup> <a name="subscription" id="@larsfronius/commercetools-cdk-constructs.ICommercetoolsSubscriptionTarget.postSubscription.parameter.subscription"></a>
 
-- *Type:* [`@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription`](#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription)
+- *Type:* <a href="#@larsfronius/commercetools-cdk-constructs.CommercetoolsSubscription">CommercetoolsSubscription</a>
 
 ---
 
