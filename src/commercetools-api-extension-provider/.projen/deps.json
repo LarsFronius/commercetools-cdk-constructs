@@ -5,16 +5,7 @@
       "type": "build"
     },
     {
-      "name": "constructs",
-      "version": "^10.0.0",
-      "type": "build"
-    },
-    {
       "name": "esbuild",
-      "type": "build"
-    },
-    {
-      "name": "projen",
       "type": "build"
     },
     {
